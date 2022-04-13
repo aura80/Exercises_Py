@@ -1,3 +1,144 @@
+for i in range(1, 10):
+        print(str(i) * i)
+
+count = 1
+for i in range(10):
+    for j in range(0, i):
+        print(count, end='')
+        count = count +1
+    print()
+# input()
+
+for i in range(1, 10):
+    for j in range(i):
+        print(i, end='')
+    print()
+
+count = 0
+for i in range(10):
+    for j in range(0, i):
+        print(count,end='')
+    count = count +1
+    print()
+
+print("Reverse numbers using for loop")
+num = 5
+# start = 5
+# stop = -1
+# step = -1
+
+for num in (range(num, -1, -1)):
+    print(num, end=" ")
+
+print()
+
+nr = 8
+for n in range(nr + 1)[::-1]:
+    print(n, end=" ")
+
+numbers = [1, 2, 3, 4, 5]
+for i in numbers[::-1]:
+    print(i)
+
+rows = 5
+# outer loop
+for i in range(1, rows + 1):
+    # inner loop
+    for j in range(1, i + 1):
+        print("*", end=" ")
+    print(' ')
+
+# outer loop
+for i in range(1, 6):
+    print('Multiplication table of:', i)
+    count = 1
+    # inner loop to print multiplication table of current number
+    while count < 11:
+        print(i * count, end=' ')
+        count = count + 1
+    print('\n')
+
+# par - impar
+odd = [1, 5, 7, 9]
+even = [i + 1 for i in odd if i % 2 == 1]
+print(even)
+
+# enumerate() - index + element
+numbers = [4, 2, 5, 7, 8]
+for i, v in enumerate(numbers):
+    print('Numbers[', i, '] =', v)
+
+# for - index + element
+numbers = [1, 2, 4, 6, 8]
+size = len(numbers)
+for i in range(size):
+    print('Index:', i, " ", 'Value:', numbers[i])
+
+# iterate string with for loop
+name = "Jessa"
+for i in name:
+    print(i, end=' ')
+
+name = "Jessa"
+for i in name[::-1]:
+    print(i, end=' ')
+
+dialogue = "Remember, Red, hope is a good thing, maybe the best of things,\
+and no good thing ever dies"
+# split on whitespace
+for word in dialogue.split():
+    print(word)
+
+numbers = [2, 3, 5, 6, 7]
+for num in numbers:
+    print(num)
+
+numbers = [1, 2, 3, 6, 7]
+size = len(numbers)
+for i in range(size):
+    print(numbers[i])
+
+dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
+for i in dict1:
+    print(i)
+
+dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
+for i in dict1.keys():
+    print(i)
+
+dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
+for key in dict1:
+    print(key, "->", dict1[key])
+
+dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
+for i in dict1.values():
+    print(i)
+
+
+def calculate (num1, num2=4):
+  res = num1 * num2
+  print(res)
+
+calculate(5, 6)
+
+sampleSet = {"Jodi", "Eric", "Garry"}
+#sampleSet.add(1, "Vicki")
+print(sampleSet)
+
+p, q, r = 10, 20 ,30
+print(p, q, r)
+
+for i in range(1, 5):
+    print(i)
+else:
+    print("this is else block statement" )
+
+listOne = [20, 40, 60, 80]
+listTwo = [20, 40, 60, 80]
+
+print(listOne == listTwo)
+print(listOne is True)
+
 # #29. Write a Python program to print out a set containing all
 # # the colors from color_list_1 which are not
 # # present in color_list_2.
@@ -177,144 +318,3 @@
 #             exit()
 #         else:
 #             print('Invalid option. Please enter a number between 1 and 4.')
-
-for i in range(1, 10):
-        print(str(i) * i)
-
-count = 1
-for i in range(10):
-    for j in range(0, i):
-        print(count, end='')
-        count = count +1
-    print()
-# input()
-
-for i in range(1, 10):
-    for j in range(i):
-        print(i, end='')
-    print()
-
-count = 0
-for i in range(10):
-    for j in range(0, i):
-        print(count,end='')
-    count = count +1
-    print()
-
-print("Reverse numbers using for loop")
-num = 5
-# start = 5
-# stop = -1
-# step = -1
-
-for num in (range(num, -1, -1)):
-    print(num, end=" ")
-
-print()
-
-nr = 8
-for n in range(nr + 1)[::-1]:
-    print(n, end=" ")
-
-numbers = [1, 2, 3, 4, 5]
-for i in numbers[::-1]:
-    print(i)
-
-rows = 5
-# outer loop
-for i in range(1, rows + 1):
-    # inner loop
-    for j in range(1, i + 1):
-        print("*", end=" ")
-    print(' ')
-
-# outer loop
-for i in range(1, 6):
-    print('Multiplication table of:', i)
-    count = 1
-    # inner loop to print multiplication table of current number
-    while count < 11:
-        print(i * count, end=' ')
-        count = count + 1
-    print('\n')
-
-# par - impar
-odd = [1, 5, 7, 9]
-even = [i + 1 for i in odd if i % 2 == 1]
-print(even)
-
-# enumerate() - index + element
-numbers = [4, 2, 5, 7, 8]
-for i, v in enumerate(numbers):
-    print('Numbers[', i, '] =', v)
-
-# for - index + element
-numbers = [1, 2, 4, 6, 8]
-size = len(numbers)
-for i in range(size):
-    print('Index:', i, " ", 'Value:', numbers[i])
-
-# iterate string with for loop
-name = "Jessa"
-for i in name:
-    print(i, end=' ')
-
-name = "Jessa"
-for i in name[::-1]:
-    print(i, end=' ')
-
-dialogue = "Remember, Red, hope is a good thing, maybe the best of things,\
-and no good thing ever dies"
-# split on whitespace
-for word in dialogue.split():
-    print(word)
-
-numbers = [2, 3, 5, 6, 7]
-for num in numbers:
-    print(num)
-
-numbers = [1, 2, 3, 6, 7]
-size = len(numbers)
-for i in range(size):
-    print(numbers[i])
-
-dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
-for i in dict1:
-    print(i)
-
-dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
-for i in dict1.keys():
-    print(i)
-
-dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
-for key in dict1:
-    print(key, "->", dict1[key])
-
-dict1 = {"Brand": "BMW", "Color": "Black", "Date": 1964}
-for i in dict1.values():
-    print(i)
-
-
-def calculate (num1, num2=4):
-  res = num1 * num2
-  print(res)
-
-calculate(5, 6)
-
-sampleSet = {"Jodi", "Eric", "Garry"}
-#sampleSet.add(1, "Vicki")
-print(sampleSet)
-
-p, q, r = 10, 20 ,30
-print(p, q, r)
-
-for i in range(1, 5):
-    print(i)
-else:
-    print("this is else block statement" )
-
-listOne = [20, 40, 60, 80]
-listTwo = [20, 40, 60, 80]
-
-print(listOne == listTwo)
-print(listOne is True)
