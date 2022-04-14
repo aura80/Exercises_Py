@@ -1,50 +1,54 @@
-# # def invers():
-# #     list1 = [100, 200, 3, 400, 500]
-# #     list2 = [100, 200, 3, 400, 500]
-# #     l = []
-# #     list1.sort(reverse=True)
-# #     print(list1)
-# #     list2.reverse()                 # -------------------------------
-# #     print(list2)
-# #
-# #     list3 = [100, 200, 3, 400, 500]
-# #     print(list3[::-1])              # -------------------------------
-# #
-# #     i = 0
-# #     while i in range(len(list3)):
-# #         l.append(list3[i])
-# #         print("-", l)
-# #         i = i + 1
-# #     print("-", l)
-# #
-# # invers()
-# #
-# # def concatenare():
-# #     list1 = ["M", "na", "i", "Ke"]
-# #     list2 = ["y", "me", "s", "lly"]
-# #     list3 = [i + j for i, j in zip(list1,list2)]
-# #     print("Folosind ZIP : ", list3)
-# #     l = []
-# #     for i in list1:
-# #         for j in list2:
-# #             a = list1.index(i)
-# #             b = list2.index(j)
-# #             if a == b:
-# #                 l.append(i+j)
-# #     print("Cu indecsi :   ", l)
-# #
-# #     k = 0
-# #     p = 0
-# #     while k in list1:
-# #         while p in list2:
-# #             a = list1.index(k)
-# #             b = list2.index(p)
-# #             if a == b:
-# #                 l.append(k+p)
-# #     print("Cu WHILE :     ", l)
-# #
-# # concatenare()
-# #
+def invers():
+    list1 = [100, 200, 3, 400, 500]
+    list2 = [100, 200, 3, 400, 500]
+    l = []
+    list1.sort()
+    print(list1)
+    list1.sort(reverse=True)
+    print(list1)
+
+    list2.reverse()                 # -------------------------------
+    print(list2)
+
+    list3 = [100, 200, 3, 400, 500]
+    print(list3[::-1])              # -------------------------------
+
+    i = 0
+    while i in range(len(list3)):
+        l.append(list3[i])
+        print("-", l)
+        i = i + 1
+    print("-", l)
+
+invers()
+
+def concatenare():
+    list1 = ["M", "na", "i", "Ke"]
+    list2 = ["y", "me", "s", "lly"]
+    list3 = [i + j for i, j in zip(list1,list2)]
+    print("Folosind ZIP : ", list3)
+
+    l = []
+    for i in list1:
+        for j in list2:
+            a = list1.index(i)
+            b = list2.index(j)
+            if a == b:
+                l.append(i+j)
+    print("Cu indecsi :   ", l)
+
+    k = 0
+    p = 0
+    while k in list1:
+        while p in list2:
+            a = list1.index(k)
+            b = list2.index(p)
+            if a == b:
+                l.append(k+p)
+    print("Cu WHILE :     ", l)
+
+concatenare()
+
 # # def square():
 # #    numbers = [1, 2, 3, 4, 5, 6, 7]
 # #    print("numbers  :  ", numbers)
