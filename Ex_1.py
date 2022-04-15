@@ -7,7 +7,6 @@ for i in range(10):
         print(count, end='')
         count = count +1
     print()
-# input()
 
 for i in range(1, 10):
     for j in range(i):
@@ -48,6 +47,11 @@ for i in range(1, rows + 1):
         print("*", end=" ")
     print(' ')
 
+# iterate string with for loop
+name = "Jessa"
+for i in name:
+    print(i, end=' ')
+
 # outer loop
 for i in range(1, 6):
     print('Multiplication table of:', i)
@@ -74,10 +78,7 @@ size = len(numbers)
 for i in range(size):
     print('Index:', i, " ", 'Value:', numbers[i])
 
-# iterate string with for loop
-name = "Jessa"
-for i in name:
-    print(i, end=' ')
+
 
 name = "Jessa"
 for i in name[::-1]:
