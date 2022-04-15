@@ -1,4 +1,5 @@
 #Numere prime
+print(" <-----  Prime numbers")
 def main():
     a = int(input("Introduceti a: "))
     b = int(input("Introduceti b (b>a): "))
@@ -20,6 +21,7 @@ def main():
 main()
 
 #Divizorii unui numar
+print("\n <-----  Divisors of a number")
 def main():
     n=int(input("Introduceti un numar intreg, n: "))
     k=0
@@ -34,7 +36,8 @@ def main():
 main()
 
 #Factorialul unui numar
-def main():
+print("\n <-----  Factorial")
+def factorial():
     n = int(input("Introduceti un numar intreg, n (in intervalul [0, 100])>>"))
     while n < 0 or n > 100:
         print("Numarul introdus nu apartine intervalului!")
@@ -47,12 +50,12 @@ def main():
     else:
         fact = 1
 
-    print("Factorialul lui {} este {}".format(n, fact))
+    print("Factorial of {} is {}".format(n, fact))
 
-
-main()
+factorial()
 
 #Eliminarea dublurilor dintr-un dictionar
+print("\n <-----  Delete doubles from a dictionary")
 student={'id1':{'nume':['Alex'],'an':2, 'grupa':1421},
         'id2':{'nume':['Andra'], 'an':3,'grupa':1434},
         'id3':{'nume':['Alex'],'an':2, 'grupa':1421},
@@ -65,15 +68,18 @@ for key,value in student.items():
 print(result)
 
 #Break vs Continue
+print("\n <-----  Break vs Continue")
 for i in range(6):
     if i==3:
         break
-    print(i)
+    print(i, end=" ")
+print()
 
 for i in range(6):
     if i==3:
         continue
-    print(i)
+    print(i, end=" ")
+print()
 
 for i in range(0,11):
     if i==3 or i==7:
