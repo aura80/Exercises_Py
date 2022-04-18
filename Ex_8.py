@@ -1,85 +1,51 @@
-print("1. Afișați pe ecran toate cifrele impare, una sub alta.")
-def impare():
-    for i in range(0,10):
-        if i % 2 != 0:
-            print(i)
-impare()
+print("Find the type of an dictionary element: ")
+x = {}
+print(type(x))
 
-print("\n2. Afișați toate numerele naturale formate din trei cifre, care se împart exact la 100, \
-în ordine descrescătoare pe aceeaşi linie, cu un spaţiu între ele.")
+print("\nNumerical keys of dictionary: ")
+my_dict = {1: "Cisco", 2: "HP", 3: "Juniper", 4: "Arista", 8: "Avaya"}
+print("my_dict = ", my_dict)
+print("*Maximum value of my_dict numerical keys is: ", max(my_dict.keys()))
 
-def nr_trei_cifre():
-    for i in range(900, 0, -1):
-        if i % 100 == 0:
-            print(i, end = " ")
-    print()
-    l = []
-    for j in range(1, 1000, 1):
-        if j % 100 == 0:
-            l.append(j)
-            l.sort(reverse = True)
-            print(l)
-    print()
-    lista = []
-    for k in range(1, 1000, 1):
-        if k % 100 == 0:
-            lista.append(k)
-    lista.reverse()
-    print(lista)
-nr_trei_cifre()
+print("\nSorted dictionary: ")
+my_dict = {1: "Cisco", 2: "HP", 3: "Juniper", 4: "Arista", 5: "Avaya"}
+print("Dictionary: ", my_dict)
+print("Sorted keys dictionary:    ", sorted(my_dict.keys()))
+print("*Keys with indexes:")
+print(sorted(my_dict.keys())[0])
+print(sorted(my_dict.keys())[1])
+print(sorted(my_dict.keys())[2])
+print(sorted(my_dict.keys())[3])
+print(sorted(my_dict.keys())[4])
+print("Sorted values dictionary:  ", sorted(my_dict.values()))
+print("*Values with indexes:")
+print(sorted(my_dict.values())[0])
+print(sorted(my_dict.values())[1])
+print(sorted(my_dict.values())[2])
+print(sorted(my_dict.values())[3])
+print(sorted(my_dict.values())[4])
+print("Dictionary items(): ", my_dict.items())
 
-print("\n3. Afișați cifrele 1 2 3 4 5 pe aceeaşi linie cu un spaţiu între ele, \
-iar pe linia următoare aceleaşi cifre în ordine descrescătoare. Afișați pe ecran expresia 1+2+3+4+5=15.")
+str = 'Hello World!\n'
+print("\nStrings: ")
+if str == 'Hello World!\n':
+    print(str)
 
-def afis_nr():
-    print(1,'',2,"",3," ","4"," ","5")
-    for i in range(1,6):
-        print(i, end = " ")
-    print()
-    for i in range(5, 0, -1):
-        print(i, end=" ")
-    print()
-    print(1,'+',2,'+',3,'+',4,'+',5,'=',15)
+print("\nFibonacci recursiv: ")
+def fibonacci(n):
+ assert n >= 0
+ if n < 2:
+    return n
+ else:
+    return fibonacci(n-1) + fibonacci(n-2)
 
-afis_nr()
+print("fibonacci(10) = ", fibonacci(10))
 
-print("\n4. Afișați dreptunghiul de mai jos, folosind numai cracterul + şi spaţiul.\n\
-++++++\n\
-+    +\n\
-++++++")
-
-def forma1():
-    print(" ->")
-    for i in range(1,4):
-        for j in range(1,7):
-            if i == 2 and (j != 1 and j != 6):
-                print(end=" ")
-            else:
-                print("+", end="")
-        print()
-forma1()
-
-print("\n4. Afișați triunghiul de mai jos, folosind numai caracterul *.\n\
-*\n\
-**\n\
-***\n\
-****")
-
-def steluta():
-    for i in range(0, 4):
-        print((i + 1) * '*')
-steluta()
-
-print("\n5. Afișați pătratul de mai jos cu interiorul plin, folosind numai cracterul +.\n\
-++++\n\
-++++\n\
-++++\n\
-++++")
-
-def patrat_plus():
-    print(" ->")
-    for i in range(0, 4):
-        for j in range(0, 4):
-            print("+", end="")
-        print()
-patrat_plus()
+print("\nList and indexes: ")
+a = ["Hello","World","Paris"]
+print("a = ", a)
+print("a[:2]  = ", a[:2])
+print("a[0:]  = ", a[0:])
+print("a[:3]  = ", a[:3])
+print("a[:-1] = ", a[:-1])
+print("a[:]   = ", a[:])
