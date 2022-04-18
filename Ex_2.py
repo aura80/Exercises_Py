@@ -22,6 +22,7 @@ def cmmdc(x, y):
 print("CMMDC of 12 & 17 =",cmmdc(24, 80))
 print("CMMDC of 4 & 6 =",cmmdc(4, 6))
 print("CMMDC of 12 & 16 =",cmmdc(12, 16))
+print("CMMDC of 24 & 8 =",cmmdc(24, 8))
 print("CMMDC of 336 & 360 =",cmmdc(336, 360))
 
 # # var 2
@@ -64,8 +65,10 @@ def cmmdc_cmmmc():
     init_n = n
     #calculez cmmdc
     while m != n:
-        if m > n: m = m - n
-        else: n = n - m
+        if m > n:
+            m = m - n
+        else:
+            n = n - m
     #m va reține cmmdc
     print("cmmdc = ",m)
     #calculez cmmmc
