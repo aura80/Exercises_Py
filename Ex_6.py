@@ -1,51 +1,69 @@
-print("Find the type of an dictionary element: ")
-x = {}
-print(type(x))
+print("\n <---------- Dictionary keys")
+def dict_work():
+    sample_dict = {
+        "name": "Kelly",
+        "age": 25,
+        "salary": 8000,
+        "city": "New york"}
 
-print("\nNumerical keys of dictionary: ")
-my_dict = {1: "Cisco", 2: "HP", 3: "Juniper", 4: "Arista", 8: "Avaya"}
-print("my_dict = ", my_dict)
-print("*Maximum value of my_dict numerical keys is: ", max(my_dict.keys()))
+    print(sample_dict)
+    print()
 
-print("\nSorted dictionary: ")
-my_dict = {1: "Cisco", 2: "HP", 3: "Juniper", 4: "Arista", 5: "Avaya"}
-print("Dictionary: ", my_dict)
-print("Sorted keys dictionary:    ", sorted(my_dict.keys()))
-print("*Keys with indexes:")
-print(sorted(my_dict.keys())[0])
-print(sorted(my_dict.keys())[1])
-print(sorted(my_dict.keys())[2])
-print(sorted(my_dict.keys())[3])
-print(sorted(my_dict.keys())[4])
-print("Sorted values dictionary:  ", sorted(my_dict.values()))
-print("*Values with indexes:")
-print(sorted(my_dict.values())[0])
-print(sorted(my_dict.values())[1])
-print(sorted(my_dict.values())[2])
-print(sorted(my_dict.values())[3])
-print(sorted(my_dict.values())[4])
-print("Dictionary items(): ", my_dict.items())
+    # Keys to extract
+    keys = ["name", "salary"]
+    d = dict()
+    r = {}
+    for i, j in sample_dict.items():
+        for k in range(len(keys)):
+            if i == keys[k]:
+                d.update({i:j})
+                print("Key to extract: ", i,j)
+    print("Dictionary Keys to extract: ", d)
 
-str = 'Hello World!\n'
-print("\nStrings: ")
-if str == 'Hello World!\n':
-    print(str)
+    for k in keys:
+        del sample_dict[k]
+    print("Delete previous keys - ", sample_dict)
 
-print("\nFibonacci recursiv: ")
-def fibonacci(n):
- assert n >= 0
- if n < 2:
-    return n
- else:
-    return fibonacci(n-1) + fibonacci(n-2)
+    for k in keys:
+        if k in sample_dict:
+            sample_dict.pop({k:sample_dict[k]})
+    print("Pop previous keys * ", sample_dict)
 
-print("fibonacci(10) = ", fibonacci(10))
+dict_work()
 
-print("\nList and indexes: ")
-a = ["Hello","World","Paris"]
-print("a = ", a)
-print("a[:2]  = ", a[:2])
-print("a[0:]  = ", a[0:])
-print("a[:3]  = ", a[:3])
-print("a[:-1] = ", a[:-1])
-print("a[:]   = ", a[:])
+print("\n <---------- List index() method")
+def indexare():
+    list1 = [1, 2, 3, 4, 1, 1, 1, 4, 5]
+
+    # Will print the index of '4' in list1
+    print()
+    print("list1 = ", list1)
+    print(f"The index of '{list1[3]}' in list1 is: {list1.index(4)} ")
+    print(f"The index of '{list1[8]}' in list1 is: {list1.index(5)} ")
+
+    list2 = ['cat', 'bat', 'mat', 'cat', 'pet']
+    print("\nlist2 = ", list2)
+    # Will print the index of 'cat' in list2
+    print(f"The index of '{list2[0]}' in list2 is: {list2.index('cat')} ")
+    print(f"The index of '{list2[1]}' in list2 is: {list2.index('bat')} ")
+    print(f"The index of '{list2[2]}' in list2 is: {list2.index('mat')} ")
+    print(f"The index of '{list2[4]}' in list2 is: {list2.index('pet')} ")
+indexare()
+
+print("\n <---------- Indenting")
+
+a = '''  hfasyugd
+            jhdfbhd
+            dkjvnjkv'''
+
+b = """ ighsrui
+ kcfjvkl
+ klvmfkdm"""
+
+c = "' ghurgn" \
+    "jnkjdfnvj" \
+    "fkvfvv" \
+    "yhdjgufrdhbfgyh '"
+print(a)
+print(b)
+print(c)
